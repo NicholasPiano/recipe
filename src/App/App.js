@@ -1,17 +1,19 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'semantic-ui-react';
 
 import hooks from '../data/hooks';
+import StyledApp from './App.style';
+import { Detail, SearchBar } from './components';
 
 const App = () => {
-  const result = hooks.useQuery({ query: 'Lasagna', ingredients: ['chocolate'] });
-  const handleClick = () => null;
+  const [detail, setDetail] = useState({});
 
   return (
-    <Button onClick={handleClick}>
-      Hello
-    </Button>
+    <StyledApp>
+      <SearchBar setDetail={setDetail} />
+      <Detail {...detail} />
+    </StyledApp>
   );
 };
 
