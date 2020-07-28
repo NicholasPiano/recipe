@@ -1,0 +1,12 @@
+{
+  "steps": {
+    "create-react-app": "Set up new React app",
+    "install dependencies": {
+      "redux": "State management",
+      "redux-saga": "Side effects, including loading from the api",
+      "semantic-ui-react": "Basic interface elements",
+      "react-redux": "React hooks for redux",
+      "redux-logger": "Logging system for debugging data process"
+    }
+  }
+}
