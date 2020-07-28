@@ -6,6 +6,7 @@ const fetch = (state, action) => {
     ...state,
     [id]: {
       parameters: { ...rest },
+      loading: true,
     },
   };
 };

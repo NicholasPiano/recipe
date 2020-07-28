@@ -8,6 +8,7 @@ const fetchError = (state, action) => {
     [id]: {
       ...query,
       error: true,
+      loading: false,
     },
   };
 };
