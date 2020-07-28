@@ -1,13 +1,12 @@
 
 import React from 'react';
 import { Button } from 'semantic-ui-react';
-import { useDispatch } from 'react-redux';
 
-import { fetch } from '../data/actions';
+import hooks from '../data/hooks';
 
 const App = () => {
-  const dispatch = useDispatch();
-  const handleClick = () => dispatch(fetch({ id: 1, query: 'Lasagna' }));
+  const result = hooks.useQuery({ query: 'Lasagna', ingredients: ['chocolate'] });
+  const handleClick = () => null;
 
   return (
     <Button onClick={handleClick}>

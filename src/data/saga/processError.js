@@ -1,10 +1,10 @@
 
 import { put } from 'redux-saga/effects';
 
-import { fetchError } from '../actions';
+import actions from '../actions';
 
 function* processError({ id, error }) {
-  yield put(fetchError({ id, error }));
+  yield put(actions.fetchError({ id, error }));
 }
 
 export default processError;

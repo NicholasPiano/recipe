@@ -1,10 +1,10 @@
 
 import { put } from 'redux-saga/effects';
 
-import { fetchResponse } from '../actions';
+import actions from '../actions';
 
 function* processResponse({ id, response }) {
-  yield put(fetchResponse({ id, response }));
+  yield put(actions.fetchResponse({ id, response }));
 }
 
 export default processResponse;

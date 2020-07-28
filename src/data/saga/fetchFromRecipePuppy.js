@@ -6,7 +6,8 @@ const proxy = 'https://cors-anywhere.herokuapp.com/';
 const url = 'http://www.recipepuppy.com/api';
 
 function fetchFromRecipePuppy({ query, ingredients, page }) {
-  const args = convertUrlParameters({ i: ingredients, q: query, p: page });
+  const i = ingredients.join(',');
+  const args = convertUrlParameters({ i, q: query, p: page });
   const full = `${proxy}${url}${args}`;
   const headers = { Origin: null };
 
